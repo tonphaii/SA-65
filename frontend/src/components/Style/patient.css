@@ -1,0 +1,22 @@
+.container {
+    margin-top: 0px;
+}
+
+.table {
+    min-width: 350;
+}
+
+.tableSpace {
+    margin-top: 5;
+}
+
+.paper {
+    margin-top: 0px;
+    padding: 0rem;
+    color: "secondary";
+
+}
+
+.root {
+    flex-grow: 1;
+}

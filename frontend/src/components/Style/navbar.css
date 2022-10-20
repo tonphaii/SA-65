@@ -1,0 +1,18 @@
+.root {
+    flex-grow: 1;
+}
+
+.menuButton{
+    margin-right: 2rem;
+}
+
+
+.title {
+    flex-grow: 1;
+}
+
+
+.navlink {
+    color: "white";
+    text-decoration: none;
+}
