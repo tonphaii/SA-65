@@ -232,8 +232,8 @@ function PatientCreate() {
                 onChange={handleChange}
               >
               <MenuItem value={""}>กรุณาเลือกเพศ</MenuItem>
-                <MenuItem value={"หญิง"}>Female</MenuItem>
-                <MenuItem value={"ชาย"}>Male</MenuItem>
+                <MenuItem value={"หญิง"}>หญิง</MenuItem>
+                <MenuItem value={"ชาย"}>ชาย</MenuItem>
               </Select>
             </FormControl>
           </Grid>
