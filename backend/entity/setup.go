@@ -197,7 +197,7 @@ func SetupDatabase() {
 	}
 	phar2err := db.Model(&Login{}).Create(&pharmacist2)
 	phar2emp := Employee{
-		Name:    "Payment2",
+		Name:    "Pharmacist2",
 		Surname: "Example2",
 		Login:   pharmacist2,
 		Role:    pharmacist,
@@ -450,7 +450,7 @@ func SetupDatabase() {
 	prescription_1 := Prescription{
 		PrescriptionID: "P00001",
 		Symptom:        "ไข้หวัด",
-		Case_Time:      time.Now(),
+		Case_Time:      time.Date(2022, 10, 10, 12, 0, 0, 0, time.UTC),
 		Employee:       phar1emp,
 		Medicine:       med5,
 		Patient:        patient_1,
@@ -460,8 +460,8 @@ func SetupDatabase() {
 	prescription_2 := Prescription{
 		PrescriptionID: "P00002",
 		Symptom:        "ปวดหัว",
-		Case_Time:      time.Now(),
-		Employee:       phar2emp,
+		Case_Time:      time.Date(2022, 10, 15, 12, 0, 0, 0, time.UTC),
+		Employee:       phar1emp,
 		Medicine:       med1,
 		Patient:        patient_2,
 	}
@@ -470,10 +470,10 @@ func SetupDatabase() {
 	prescription_3 := Prescription{
 		PrescriptionID: "P00003",
 		Symptom:        "แผลถลอก",
-		Case_Time:      time.Now(),
+		Case_Time:      time.Date(2022, 10, 16, 12, 0, 0, 0, time.UTC),
 		Employee:       phar1emp,
 		Medicine:       med6,
-		Patient:        patient_2,
+		Patient:        patient_3,
 	}
 	db.Model(&Prescription{}).Create(&prescription_3)
 
