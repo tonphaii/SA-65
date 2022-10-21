@@ -41,14 +41,14 @@ export default function DrawerBar({ role, drawerWidth, handleDrawerClose, open ,
             menu = [
                 { name: "หน้าแรก", icon: <HomeIcon />, path: "/" },
             
-                { name: "ข้อมูลผู้ป่วย", icon: <PersonIcon />, path: "/patient" },
+                // { name: "ข้อมูลผู้ป่วย", icon: <PersonIcon />, path: "/patient" },
                 
-                { name: "สั่งยา", icon: <LocalPharmacyIcon />, path: "/prescription" },
-                {
-                  name: "ประวัติการสั่งยา",
-                  icon: <LibraryBooksIcon />,
-                  path: "/PrescriptionHistory",
-                },
+                // { name: "สั่งยา", icon: <LocalPharmacyIcon />, path: "/prescription" },
+                // {
+                //   name: "ประวัติการสั่งยา",
+                //   icon: <LibraryBooksIcon />,
+                //   path: "/PrescriptionHistory",
+                // },
               ];
         }
         else if (role === "payment") {

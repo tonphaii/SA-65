@@ -1,4 +1,4 @@
-import { Toolbar, IconButton, Typography, Box} from "@mui/material";
+import { Toolbar, IconButton, Typography, Box } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import React, { useEffect } from "react";
@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { EmployeeInterface } from "../../modules/IEmployee";
 import Button from "@mui/material/Button";
 import MedicationIcon from "@mui/icons-material/Medication";
+import { Link as RouterLink } from "react-router-dom";
 const drawerWidth = 240;
 
 export default function Navbar({ open, onClick }: any) {
@@ -68,22 +69,27 @@ export default function Navbar({ open, onClick }: any) {
           aria-label="open drawer"
           onClick={onClick}
           edge="start"
-          sx={{ mr: 2, ...(open && { display: "none" }) }}>
+          sx={{ mr: 2, ...(open && { display: "none" }) }}
+        >
           <MenuIcon />
         </IconButton>
-        <MedicationIcon fontSize="large"></MedicationIcon>
+
         <Typography variant="h6" noWrap component="div">
-          Prescription
+          <Button component={RouterLink} to="/" variant="contained" >
+            <MedicationIcon fontSize="large"></MedicationIcon>
+            Prescription
+          </Button>
         </Typography>
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: "flex" }}>
           {/* <IconButton size="large" color="inherit"> */}
-            <Button  onClick={handleSignOutClick} style={{ border: "2px solid ", color: "#F4F6F6" }}>
-              {employee?.Name} {employee?.Surname}{" "}&nbsp;
-               <ExitToAppIcon></ExitToAppIcon>
-            </Button>
-           
-          
+          <Button
+            onClick={handleSignOutClick}
+            style={{ border: "2px solid ", color: "#F4F6F6" }}
+          >
+            {employee?.Name} {employee?.Surname} &nbsp;
+            <ExitToAppIcon></ExitToAppIcon>
+          </Button>
         </Box>
       </Toolbar>
     </AppBar>
